@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<script type="text/javascript">
+
+    /*Botón de “Subrayado”: cuando se pulsa, 
+    el texto se subraya (si no lo estaba) o vuelve a estar sin subrayar (si lo estaba).*/
+    function Subrayado(){
+        
+        var Texto = document.getElementById("texto");
+        
+        if (Texto.style.textDecoration!="underline"){
+            Texto.style.textDecoration="underline"
+        }
+        
+        else{
+            Texto.style.textDecoration="none"; 
+        }
+
+    }
+</script>
+
+<script type="text/javascript">
+
+    var count2 = 0
+    
+    function Fondo(){
+        /*Botón de “Fondo”: cada vez que se pulsa, permite cambiar el color de fondo del texto 
+        entre rojo (red), azul (blue), amarillo (yellow), y el blanco original (white).r*/
+        
+        var Textob = document.getElementById("texto");
+
+        
+        if (count2==0){
+            Textob.style.backgroundColor="red";
+        }
+        
+        if (count2==1){
+            Textob.style.backgroundColor="blue";
+        }
+        
+        if (count2==2){
+            Textob.style.backgroundColor="yellow";
+        }
+
+        if (count2==3){
+            Textob.style.backgroundColor="white";
+            count2 = -1
+        }
+
+        count2 += 1;
+    }
+  
+
+</script>
+
+<script type="text/javascript">
+    
+    var count3 = 0
+    
+    function Texto(){
+        /*Botón de “Fondo”: cada vez que se pulsa, permite cambiar el color del texto entre 
+        rojo (red), azul (blue), amarillo (yellow), y el negro original (black).*/
+        
+        var Textoc = document.getElementById("texto");
+
+        
+        if (count3==0){
+            Textoc.style.color="red";
+        }
+        
+        if (count3==1){
+            Textoc.style.color="blue";
+        }
+        
+        if (count3==2){
+            Textoc.style.color="yellow";
+        }
+
+        if (count3==3){
+            Textoc.style.color="black";
+            count3 = -1
+        }
+
+        count3 += 1;
+    }
+      
+</script>
+
+<script type="text/javascript">
+    
+    var count1 = 0
+    
+    function Tamaño(){
+        /*Botón de “Tamaño”: cada vez que se pulsa, permite cambiar el tamaño del texto entre 
+        grande (large), extra grande (x-large), extra-extra grande (xx-large), 
+        y el tamaño original (medium).w).*/
+        
+        var Textod = document.getElementById("texto");
+
+        
+        if (count1==0){
+            Textod.style.fontSize="large";
+        }
+        
+        if (count1==1){
+            Textod.style.fontSize="x-large";
+        }
+        
+        if (count1==2){
+            Textod.style.fontSize="xx-large";
+        }
+
+        if (count1==3){
+            Textod.style.fontSize="medium";
+            count1 = -1
+        }
+
+        count1 += 1;
+    }
+      
+</script>
+
+<html>
+    <head>
+
+    </head>
+    <body>
+        <p id="texto">Esto es un ejemplo de texto a ser modificado</p>
+        <section>
+            <form>
+                <button type="button" onclick="Subrayado();">Subrayado</button>
+                <button type="button" onclick="Fondo();">Fondo</button>
+                <button type="button" onclick="Texto();">Texto</button>
+                <button type="button" onclick="Tamaño();">Tamaño</button>
+            </form>
+        </section>
+    </body>
+</html>
